@@ -6,7 +6,7 @@ I'm an athlete, musician, and PhD student at Vanderbilt University in Nashville 
 
 Hey you! Get a haircut! I was a Peace Corps volunteer in Sierra Leone from 2012 to 2014.  Of course, the last 8 months overlapped with the onset of the Ebola epidemic in West Africa.  This experience got me interested in public health and trying to understand how infectious disease spreads in communities and how people can react to reduce the impact of disease.  Here's me with short hair.
 
-![](https://michaelleewilliams.github.io/face.jpeg)
+![](https://michaelleewilliams.github.io/smallface.jpeg)
 
 Wow! Much better! I live in Nashville right now and you should get in touch if you have any interesting collaborations in statistics and public health or if you need a guitarist/bassist for any musical projects.
 
