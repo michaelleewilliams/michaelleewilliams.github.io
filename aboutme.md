@@ -1,3 +1,4 @@
+title: About
 # About me
 
 I'm an athlete, musician, and PhD student at Vanderbilt University in Nashville Tennessee.  I'm partway through my first year at Vanderbilt and developing the fundamentals of probability and epidemiology to ultimately shed light on questions of public health using observational data.  Here is a picture of me when I was in the Peace Corps.
