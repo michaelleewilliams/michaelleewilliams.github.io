@@ -1,10 +1,9 @@
 ---
-title: "Final Project 6311"
+title: "Beating the Spread"
 author: "Michael Williams"
-date: "December 1, 2017"
 output:
-  pdf_document: default
   html_document: default
+  pdf_document: default
 ---
 
 
@@ -23,11 +22,11 @@ $H_o: W - L = 0$
 
 Since I can only observe W-L for my full dataset a single time I will use randomization to determine the proability of observing as extreme a value under the null hypothesis.  This probability will serve as my p value.  
 $p = P(W_{obs}-L_{obs} < W_{sim}-L_{sim})$
-\newpage
+
 
 #The data
 The data for this study was taken from the oddsshark.com searchable NFL archive ([link](http://www.oddsshark.com/nfl/database)). The following image shows an example search result; it is the last six games played in San Francisco, their outcomes, and their spreads.  
-![](nfl data.JPG)
+![](/Users/michael/Dropbox/BIOS 6311/6311 proj/nfl data.JPG)
 
 Note that on September 21, 2017 the San Francisco 49ers (SF) lost to the Los Angeles Rams (LAR) 41-39 but beat the spread with the +3 granted by the oddsmakers, this would count as a spread-win even though it was a loss.  The database gives the spread and outcome for any game stretching back decades.  The spread displayed is reported to be an average of the common spreads available preceding  the game.  I chose games to include in this study with the following predetermined criteria.
 
@@ -36,13 +35,17 @@ Note that on September 21, 2017 the San Francisco 49ers (SF) lost to the Los Ang
 1. The away team is one of the following (Chosen based on where I think it's warm): MIA, JAC, TB, CAR, ATL, TEN, NO, HOU, DAL, ARZ, SD, SF, LAR, LAC
   
 Restricting to this inclusion criteria gives a sample of 288 games.
-\newpage
+
 
 #Exploratory Analysis
 First I want to explore the unfiltered data to make sure there are no anomalous results to make me distrust my data after filtering. The following plot shows the ratio of wins to losses as well as the ratio of spread-wins to spread-losses broken down by team before applying restriction criteria 3 (ie. with no restriction on who the away team is).  The total number of games in this dataset is 779.  See Appendix A for code.
 ```{r, echo=FALSE}
+filepath <- "/Users/michael/Dropbox/BIOS 6311/6311 proj/resultscsv.csv"
+```
+
+```{r, echo=FALSE}
 library(ggplot2)
-filepath <- "C:/Users/Michael/Desktop/6311 proj/resultscsv.csv"
+
 x<- read.csv(filepath , stringsAsFactors = FALSE)
 colnames(x) <- c('date' , 'away' , 'awayscore' , 'home' , 'homescore' , 'homewl' , 'spread' , 'homevspread' , 'total' , 'ou')
 
@@ -67,6 +70,7 @@ ggplot(data = byteam) + geom_bar(aes(x=team, y = winr , color ='winrate') ,stat 
 
 
 ```
+<br>
 Interestingly, our home teams are winning about 60% of their games, although the spread is working at a very accurate rate of `r a`. The New England Patriots have won at an impressive `r round(byteam[3,2], 3)` rate and the Cleveland Browns at an abysmal `r round(byteam[1,2], 3)` rate which gives me confidence that this data is accurate.
 \newpage
 
@@ -95,6 +99,7 @@ res <- rbind(res , data.frame(team='TOTAL',winr=sum(nvs$homewl == 'W') / (sum(nv
 #Plot of all the raw winrates and spread beating rates
 ggplot(data = res) + geom_bar(aes(x=team, y = winr , color ='winrate') ,stat = 'identity', alpha = .3, fill ='lightblue') + geom_bar(aes(x=team,y = sprr , color ='rate of beating spread', alpha = .2) ,stat = 'identity', alpha = .2 , fill ='red') + labs(y = 'ratio') + scale_color_manual(values = c('red','blue'))
 ```
+<br>
 With all of our selection criteria applied, we see a slight change in the total spread-win rate, it is now `r round(res[14,3],3)`.  The total spread-wins in this dataset is 151 and the total spread-losses is 137. This is a positive result but is it statistically significant?  What is the likelihood that the actual rate at which cold-weather teams beat the spread against warm-weather teams is 0.5 and these results are simply a sample from that null distribution?  In order to test this I will simulate 10,000 288 game samples where the true probability for the home team to beat the spread is 0.5, I will then compare my observed results to the simulated ones. The following is a histogram of the win differential in simulated game sets (theoretical expected value = 0) with a red line marking the observed win differential.  See Appendix C for code.
 
 ```{r, echo=FALSE}
@@ -113,6 +118,7 @@ a <- sum(obswin < simwin) / loops
 
 hist(simwin , main = 'Simulations under the null' , xlab = 'Win differential') ; abline(v=obswin,col="red", lwd = 2)
 ```
+<br>
 The probability of observing a simulated result as strong as the observed is `r round(a,3)`.
 
 #Discussion
@@ -121,10 +127,9 @@ The p value calculated from comparing the observed win differential to the null 
 The study also suffers from a limitation regarding the historical spreads.  I'm using the post hoc estimate of the spread according to one website.  In reality spreads are dynamic and the actual spreads a person would have bet would surely be different from the ones used in this study.
 
 The condition that I examined is imperfect as well.  My goal was to pick an exposure that would be poorly accounted for by the betting public, maybe the effect of cold weather is in fact overestimated by the public and the actual correct scheme is to bet against the home team under such conditions.  In the future I intend to analyze similar data sets with more obscure criteria to try to find an edge in betting.  If I can find a scheme that outperforms the simulations under the null 95% of the time with an observed spread-win rate of at least 0.6 then I'll develop a betting scheme from that and see how it performs next season.
-\newpage
 
 #Appendix A
-```{r, eval=FALSE, tidy=TRUE}
+```{r, eval=FALSE}
 #This code generates the Exploratory Analysis plot
 library(ggplot2)
 filepath <- "C:/Users/Michael/Desktop/6311 proj/resultscsv.csv"
@@ -150,10 +155,9 @@ ggplot(data = byteam) + geom_bar(aes(x=team, y = winr , color ='winrate') ,stat 
 
 
 ```
-\newpage
 
 #Appendix B
-```{r, eval=FALSE, tidy=TRUE}
+```{r, eval=FALSE}
 #Plot only the games of interest
 warmteams <- c('MIA','JAC','TB','CAR','ATL','TEN','NO','HOU','DAL','ARI','SD','SF','LAR','OAK')
 nvs <- x[x$away %in% warmteams,]
@@ -176,10 +180,9 @@ res <- rbind(res , data.frame(team='TOTAL',winr=sum(nvs$homewl == 'W') / (sum(nv
 #Plot of all the raw winrates and spread beating rates
 ggplot(data = res) + geom_bar(aes(x=team, y = winr , color ='winrate') ,stat = 'identity', alpha = .3, fill ='lightblue') + geom_bar(aes(x=team,y = sprr , color ='rate of beating spread', alpha = .2) ,stat = 'identity', alpha = .2 , fill ='red') + labs(y = 'ratio') + scale_color_manual(values = c('red','blue'))
 ```
-\newpage
 
 #Appendix C
-```{r, eval=FALSE, tidy=TRUE}
+```{r, eval=FALSE}
 #test hypothesis by randomization
 ngames <- sum(nvs$homevspread == 'L') + sum(nvs$homevspread == 'W')
 loops <- 10000
