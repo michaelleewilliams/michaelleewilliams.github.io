@@ -2,6 +2,6 @@ Welcome! Here you can find some information about me and some of my professional
 
 email: michael (dot) l (dot) williams (at) vanderbilt (dot) edu
 
-[Projects](https://michaelleewilliams.github.io/splash/projects.html)  
+[Project](https://michaelleewilliams.github.io/splash/projects.html)  
 [About](https://michaelleewilliams.github.io/splash/aboutme.html)  
 [Music](https://michaelleewilliams.github.io/splash/music.html)
