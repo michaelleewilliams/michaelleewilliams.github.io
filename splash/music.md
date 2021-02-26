@@ -6,4 +6,4 @@ I'm a guitarist, bassist and singer interested in blues, garage, punk, R&B, and 
 
 ## Mp3
 
-[killer bees](https://michaelleewilliams.github.io/music/KillerBees.mps)
+[killer bees](https://michaelleewilliams.github.io/music/KillerBees.mp3)
