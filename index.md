@@ -1,5 +1,3 @@
-# Michael Williams
-## Phd Candidate
 email: michael (dot) l (dot) williams (at) vanderbilt (dot) edu
 
 My research primarily concerns population pharmacokinetics and data extraction/processing from electronic health records.  More broadly, I have an interest in human health and I enjoy picking up the various skills necessary to making an impact in this domain.  Feel free to get in touch if you are interested in my work or if you work in similar domains and want to connect.  I also make music and try to keep demos I am happy with catalogued here.
