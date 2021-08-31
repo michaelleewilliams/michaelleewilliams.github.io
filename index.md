@@ -11,4 +11,7 @@ My research primarily concerns population pharmacokinetics and data extraction/p
 1. McNeer E, Beck C, Weeks HL, Williams ML, James NT, & Choi L (2019). A post-processing algorithm for building longitudinal medication dose data from extracted medication information using natural language processing from electronic health records [Preprint]. bioRxiv. [link](https://doi.org/10.1101/775015)
 
 ## Music
-I am available for collaboration, particularly amateur jams. [Check out](https://michaelleewilliams.github.io/splash/music.html) my musical interests and output here.
+
+![](https://michaelleewilliams.github.io/splash/pictures/1BE0830C-E359-468F-BDFF-F4215D2330EB_1_201_a.jpeg)
+
+I am available for collaboration or amateur jams. [Check out](https://michaelleewilliams.github.io/splash/music.html) my musical interests and output here.
