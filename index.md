@@ -12,6 +12,6 @@ My research primarily concerns population pharmacokinetics and data extraction/p
 
 ## Music
 
-![](https://michaelleewilliams.github.io/splash/pictures/1BE0830C-E359-468F-BDFF-F4215D2330EB_1_201_a.jpeg)
+![](https://michaelleewilliams.github.io/pictures/1BE0830C-E359-468F-BDFF-F4215D2330EB_1_201_a.jpeg)
 
 I am available for collaboration or amateur jams. [Check out](https://michaelleewilliams.github.io/splash/music.html) my musical interests and output here.
