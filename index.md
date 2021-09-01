@@ -22,4 +22,5 @@ I am available for collaboration or amateur jams. [Check out](https://michaellee
 ## Links
 
 ![GitHub Profile](https://github.com/michaelleewilliams)
+
 ![Vanderbilt Biostatistics Students](https://www.vanderbilt.edu/biostatistics-graduate/cpt/people/michael-williams/)
