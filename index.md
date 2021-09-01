@@ -17,3 +17,9 @@ My research primarily concerns population pharmacokinetics and data extraction/p
 ![](https://michaelleewilliams.github.io/pictures/1BE0830C-E359-468F-BDFF-F4215D2330EB_1_201_a.jpeg)
 
 I am available for collaboration or amateur jams. [Check out](https://michaelleewilliams.github.io/splash/music.html) my musical interests and output here.
+
+
+## Links
+
+![GitHub Profile](https://github.com/michaelleewilliams)
+![Vanderbilt Biostatistics Students](https://www.vanderbilt.edu/biostatistics-graduate/cpt/people/michael-williams/)
