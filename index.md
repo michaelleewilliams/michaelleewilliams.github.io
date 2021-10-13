@@ -1,5 +1,7 @@
 email: michael (dot) l (dot) williams (at) vanderbilt (dot) edu
 
+[CV](https://github.com/michaelleewilliams/michaelleewilliams.github.io/blob/master/WilliamsCV.pdf)
+
 <img src="https://michaelleewilliams.github.io/pictures/10017466-2B1C-4572-B573-E1CA415405F2_1_201_a.jpeg" alt="drawing" width="200"/>
 
 My research primarily concerns population pharmacokinetics and data extraction/processing from electronic health records.  More broadly, I have an interest in human health and I enjoy picking up the various skills necessary to making an impact in this domain.  Feel free to get in touch if you are interested in my work or if you work in similar domains and want to connect.  I also make music and try to keep demos I am happy with catalogued here.
