@@ -1,6 +1,6 @@
 email: michael (dot) l (dot) williams (at) vanderbilt (dot) edu
 
-[CV](https://github.com/michaelleewilliams/michaelleewilliams.github.io/blob/master/WilliamsCV.pdf)
+[CV](michaelleewilliams.github.io/WilliamsCV.pdf)
 
 <img src="https://michaelleewilliams.github.io/pictures/10017466-2B1C-4572-B573-E1CA415405F2_1_201_a.jpeg" alt="drawing" width="200"/>
 
